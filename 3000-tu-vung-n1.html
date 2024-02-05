@@ -1,0 +1,19 @@
+<html>
+
+<head>
+	<script src="jquery.js"></script>
+	<script>
+		$(function () {
+			$("#common").load("common.html");
+			var paramValue = "1";
+        	var url = "common.html?bai=" + paramValue;
+        	$("#includedContent").load(url);
+		});
+	</script>
+</head>
+
+<body>
+	<div id="common"></div>
+</body>
+
+</html>
