@@ -16,8 +16,11 @@
 
     gtag('config', 'UA-83144537-1');
     var urlParams = new URLSearchParams(window.location.search);
+    var url = "3000-tu-vung-n1/home.html";
     var paramValue = urlParams.get('bai');
-    var url = "3000-tu-vung-n1/bai-" + paramValue + ".html";
+    if(paramValue != null){
+      url = "3000-tu-vung-n1/bai-" + paramValue;
+    }
     $("#includedContent").load(url);
 
   </script>
