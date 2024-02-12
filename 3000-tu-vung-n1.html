@@ -1,13 +1,13 @@
 <html>
 
 <head>
-	<script src="jquery.js"></script>
+	<script src="common/jquery.js"></script>
 	<script>
 		$(function () {
-			$("#common").load("common.html");
+			$("#common").load("3000-tu-vung-n1/common.html");
 			var urlParams = new URLSearchParams(window.location.search);
 			var paramValue = urlParams.get('bai');
-			var url = "common.html?bai=" + paramValue;
+			var url = "3000-tu-vung-n1/common.html?bai=" + paramValue;
 			$("#includedContent").load(url);
 		});
 	</script>

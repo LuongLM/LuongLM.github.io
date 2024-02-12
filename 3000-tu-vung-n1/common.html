@@ -8,7 +8,7 @@
   <link rel="pingback" href="https://vietnamjp.com/xmlrpc.php">
   <script type="text/javascript" async="" src="common/js"></script>
   <script async="" src="common/js(1)"></script>
-  <script src="jquery.js"></script>
+  <script src="common/jquery.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -17,7 +17,6 @@
     gtag('config', 'UA-83144537-1');
     var urlParams = new URLSearchParams(window.location.search);
     var paramValue = urlParams.get('bai');
-    console.log("Received parameter:", paramValue);
     var url = "3000-tu-vung-n1/bai-" + paramValue + ".html";
     $("#includedContent").load(url);
 
@@ -501,7 +500,7 @@
   <link rel="preload"
     href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Roboto:400,700&amp;display=swap"
     as="fetch" crossorigin="anonymous">
-  <link rel="preload" href="common/fontawesome-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/fontawesome-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script type="text/javascript">
     !function (e, n, t) { "use strict"; var o = "https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Roboto:400,700", r = "__3perf_googleFonts_94435"; function c(e) { (n.head || n.body).appendChild(e) } function a() { var e = n.createElement("link"); e.href = o, e.rel = "stylesheet", c(e) } function f(e) { if (!n.getElementById(r)) { var t = n.createElement("style"); t.id = r, c(t) } n.getElementById(r).innerHTML = e } e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function (e) { return e.text() }).then(function (e) { return e.replace(/@font-face {/g, "@font-face{font-display:swap;") }).then(function (e) { return t[r] = e }).then(f).catch(a)) : a() }(window, document, localStorage);
   </script>
