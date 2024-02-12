@@ -1236,7 +1236,7 @@ h2.comments-title{font-size:20px;padding-bottom:10px;}
 .freshwp-sidebar-two-wrapper-inside {padding: 15px 0px;}
 .freshwp-main-wrapper-inside {padding: 15px 0px;}
 /*nut next prev post*/
-.nav-previous a, .nav-next a{padding: 10px 5px;color: #fff;border-radius: 5px;background: #ff4700;display: block;margin: 2px;}
+.nav-previous a, .nav-next a{padding: 1px 15px;color: #fff;border-radius: 5px;background: #ff4700;display: block;margin: 2px;}
 .nav-previous a:hover , .nav-next a:hover {background: #f97e58;}
 
 .my_form {max-width: 550px;margin: 20px auto; width: 98%;}
