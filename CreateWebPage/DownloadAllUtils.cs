@@ -1,26 +1,24 @@
-﻿using CreateWebPage;
+using CreateWebPage;
 using HtmlAgilityPack;
 
-class Program
+class DownloadAllUtils
 {
-    static async Task Main()
+    public static async Task DownloadAll()
     {
-        // DownloadAllUtils.DownloadAll();
-        await DownloadPartOfWebUtils.DownloadPartOfWeb();
-        // List<LessonModel> lessons = [];
+        List<LessonModel> lessons = [];
 
-        // for (int i = 1; i <= 40; i++)
-        // {
-        //     LessonModel lesson = new()
-        //     {
-        //         Name = "3000-tu-vung-n1-bai-" + i,
-        //         Index = 2636 + i
-        //     };
-        //     lessons.Add(lesson);
-        // }
+        for (int i = 1; i <= 40; i++)
+        {
+            LessonModel lesson = new()
+            {
+                Name = "3000-tu-vung-n1-bai-" + i,
+                Index = 2636 + i
+            };
+            lessons.Add(lesson);
+        }
 
-        // // Tải và phân tích HTML của trang web cho từng URL song song
-        // await Task.WhenAll(lessons.Select(l => DownloadAndSaveWebsiteAsync(l)));
+        // Tải và phân tích HTML của trang web cho từng URL song song
+        await Task.WhenAll(lessons.Select(l => DownloadAndSaveWebsiteAsync(l)));
     }
 
     static async Task DownloadAndSaveWebsiteAsync(LessonModel lesson)
@@ -28,7 +26,7 @@ class Program
         try
         {
             // Đường dẫn của trang web bạn muốn lưu
-            int lessonIndex = 2636 + lesson.Code;
+            int lessonIndex = 2636 + lesson.Index;
             string url = "https://vietnamjp.com/" + lesson.Name + "-" + lessonIndex;
 
             // Lấy đường dẫn của thư mục chứa file Program.cs
@@ -39,7 +37,6 @@ class Program
             // Tải và phân tích HTML của trang web
             HtmlWeb web = new();
             HtmlDocument document = web.Load(url);
-            HtmlNode targetElement = document.GetElementbyId("post-" + 2636 + lessonIndex);
 
             // Lưu trữ nội dung HTML vào file
             // Kiểm tra xem file đã tồn tại hay chưa
